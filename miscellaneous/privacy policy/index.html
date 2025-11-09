@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Synapse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0c0c1a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #00ff88;
+            margin-bottom: 10px;
+            animation: pulseGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88; }
+            100% { text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 60px #00ff88; }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #00ff88;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            animation: underlineExpand 2s ease-in-out infinite;
+        }
+
+        @keyframes underlineExpand {
+            0%, 100% { width: 0; }
+            50% { width: 100%; }
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .synapse-svg {
+            position: absolute;
+            top: -100px;
+            right: -200px;
+            width: 400px;
+            height: 400px;
+            opacity: 0.1;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            section { padding: 20px; margin-bottom: 30px; }
+            .synapse-svg { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Animated Synapse Vector Graphic -->
+        <svg class="synapse-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <radialGradient id="neuronGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0" />
+                </radialGradient>
+            </defs>
+            <!-- Neuron body -->
+            <circle cx="200" cy="200" r="30" fill="url(#neuronGrad)" />
+            <!-- Dendrites -->
+            <path d="M200 170 Q150 120 100 150" stroke="#00ff88" stroke-width="2" fill="none" opacity="0.6">
+                <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" />
+            </path>
+            <path d="M200 230 Q250 280 300 250" stroke="#00ff88" stroke-width="2" fill="none" opacity="0.6">
+                <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" begin="1s" />
+            </path>
+            <!-- Axon -->
+            <line x1="200" y1="200" x2="200" y2="350" stroke="#00ff88" stroke-width="3" opacity="0.7">
+                <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" repeatCount="indefinite" />
+            </line>
+            <!-- Synaptic connections with sparkles -->
+            <circle cx="100" cy="150" r="5" fill="#00ff88">
+                <animate attributeName="r" values="5;8;5" dur="1s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="300" cy="250" r="5" fill="#00ff88">
+                <animate attributeName="r" values="5;8;5" dur="1s" repeatCount="indefinite" begin="0.5s" />
+            </circle>
+        </svg>
+
+        <div class="header">
+            <h1>Synapse Privacy Policy</h1>
+            <p class="subtitle">Tiny Trivia, Big Curiosity</p>
+        </div>
+
+        <section>
+            <h2>Our Commitment to Privacy</h2>
+            <p>At Synapse, we're all about sparking those tiny moments of trivia that ignite big waves of curiosity. We design our app with your peace of mind in mind, ensuring that exploring ideas feels as free and unburdened as a neural spark across the mind.</p>
+        </section>
+
+        <section>
+            <h2>What We Collect</h2>
+            <p>Nothing. That's right—we don't collect, store, or transmit any personal data, usage analytics, or device information from Synapse users. Your trivia sessions, curiosities, and discoveries stay entirely on your device, private and yours alone. No tracking, no logs, no exceptions.</p>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have questions, feedback, or just want to share a mind-bending fact, we're here for it. Reach out to us anytime using the email address listed on the Synapse Google Play Store page. We respond with the same curiosity that powers our app.</p>
+        </section>
+    </div>
+</body>
+</html>
