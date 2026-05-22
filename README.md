@@ -106,3 +106,9 @@ See the [LICENSE](LICENSE) file for details.
 **Open. Learn. Wonder.**
 
 *Synapse – Little facts, big discoveries.* ✨
+
+## Contributors
+
+<a href="https://github.com/FahadBinHussain/Synapse/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FahadBinHussain/Synapse" alt="Contributors" />
+</a>
